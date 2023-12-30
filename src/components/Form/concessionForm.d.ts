@@ -11,7 +11,6 @@ declare type CFormInitialValues = {
   destinationStation: string;
   prevPassNumber: string;
   reEnterPrevPassNumber: string;
-  oldVoucherNumber: string;
   oldPassExpiryDate: Date;
   branch: string;
   academicYear: string;

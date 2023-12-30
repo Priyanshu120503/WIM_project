@@ -87,10 +87,6 @@ const SingleApplicationDetails: React.FC<SingleApplicationDetailsProps> = ({
           value={getUserDetailsValue("prevPassNumber")}
         />
         <SingleField
-          label="Old Voucher Number"
-          value={getUserDetailsValue("oldVoucherNumber")}
-        />
-        <SingleField
           label="Old Pass Expiry"
           value={
             getUserDetailsValue("oldPassExpiryDate") !== "-"

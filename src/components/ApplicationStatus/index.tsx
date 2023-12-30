@@ -23,7 +23,7 @@ const ApplicationStatus = () => {
     try {
       setIsFetching(true);
       const response = await getUserDetails(emailID);
-      if (response.status === 201) {
+      if (response.status === 200) {
         setUserDetails({ ...response?.data });
       } else {
         toast.error("Unable to find user details");

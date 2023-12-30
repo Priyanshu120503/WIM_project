@@ -22,7 +22,6 @@ const ConcessionFormWrapper = () => {
     destinationStation: destinationStation[0].value,
     prevPassNumber: "",
     reEnterPrevPassNumber: "",
-    oldVoucherNumber: "",
     oldPassExpiryDate: new Date(),
     branch: branchOptions[0].value,
     academicYear: "1",
@@ -34,9 +33,12 @@ const ConcessionFormWrapper = () => {
   const navigate = useNavigate();
 
   const onSubmit = async (values: CFormInitialValues) => {
+    console.log('submitted')
+
     try {
       const response = await addUserDetails(values);
-      if (response.status === 201) {
+      console.log(response)
+      if (response.status === 200) {
         navigate("/success", {
           state: {
             enrollmentNumber: response?.data?.result.enrollmentNumber,

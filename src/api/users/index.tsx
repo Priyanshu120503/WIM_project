@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 
-const API_ENDPOINT = process.env.REACT_APP_NODE_SERVER_API;
+const API_ENDPOINT = 'http://localhost:5000';
 
 const addUserDetails = async (userData: CFormInitialValues) => {
   const response = await axios.post(`${API_ENDPOINT}/`, {

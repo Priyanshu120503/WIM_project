@@ -54,7 +54,7 @@ const ConcessionForm: React.FC<
         errorMessage={getIsInValidAndErrorMessage("fullName").errorMessage}
       />
       <FormGroupWrapper
-        type="text"
+        type="number"
         label="Roll Number"
         controllerProps={{
           placeholder: "Enter roll number",
@@ -65,6 +65,7 @@ const ConcessionForm: React.FC<
           onChange: handleChange,
           disabled: isSubmitting,
           onBlur: handleBlur,
+          min: 180000000
         }}
         errorMessage={getIsInValidAndErrorMessage("rollNumber").errorMessage}
       />
@@ -94,7 +95,7 @@ const ConcessionForm: React.FC<
         errorMessage={getIsInValidAndErrorMessage("emailID").errorMessage}
       />
       <FormGroupWrapper
-        type="text"
+        type="number"
         label="Contact Number"
         controllerProps={{
           placeholder: "Enter contact number",
@@ -105,6 +106,7 @@ const ConcessionForm: React.FC<
           onChange: handleChange,
           disabled: isSubmitting,
           onBlur: handleBlur,
+          min: 1000000000
         }}
         errorMessage={getIsInValidAndErrorMessage("contact").errorMessage}
       />
@@ -138,7 +140,7 @@ const ConcessionForm: React.FC<
         errorMessage={getIsInValidAndErrorMessage("address").errorMessage}
       />
       <FormGroupWrapper
-        type="text"
+        type="number"
         label="PIN code"
         controllerProps={{
           placeholder: "Enter pin code",
@@ -149,6 +151,8 @@ const ConcessionForm: React.FC<
           onChange: handleChange,
           disabled: isSubmitting,
           onBlur: handleBlur,
+          min: 100000,
+          max: 999999
         }}
         errorMessage={getIsInValidAndErrorMessage("pinCode").errorMessage}
       />
@@ -216,7 +220,7 @@ const ConcessionForm: React.FC<
           getIsInValidAndErrorMessage("reEnterPrevPassNumber").errorMessage
         }
       />
-      <FormGroupWrapper
+      {/* <FormGroupWrapper
         type="text"
         label="Old Voucher Number"
         controllerProps={{
@@ -232,7 +236,7 @@ const ConcessionForm: React.FC<
         errorMessage={
           getIsInValidAndErrorMessage("oldVoucherNumber").errorMessage
         }
-      />
+      /> */}
       <FormGroupWrapper
         type="date-picker"
         label="Old Pass Expiry"
